@@ -7,6 +7,8 @@ function TestForm() {
   const [inputValue, setInputValue] = useState('');
   const [apiResponse, setApiResponse] = useState('');
 
+  const baseUrl = 'https://hook-generator.onrender.com';
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -27,7 +29,7 @@ function TestForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await axios.post('http://0.0.0.0:3000/ai/get-answer', { message: getHookMessage(inputValue) });
+    const response = await axios.post(`${baseUrl}/ai/get-answer`, { message: getHookMessage(inputValue) });
     setApiResponse(response.data.answer);
   };
 
