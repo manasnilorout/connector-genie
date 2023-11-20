@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './HookForm.css';
+import './Form.css';
 import ApiResponse from './ApiResponse';
 
 function HookForm() {

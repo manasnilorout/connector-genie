@@ -22,7 +22,7 @@ function App() {
       {!formType && (
         <>
           <button onClick={() => handleButtonClick('hooks')}>Generate JS hooks</button>
-          <button onClick={() => handleButtonClick('tests')}>Generate tests for hook</button>
+          <button onClick={() => handleButtonClick('tests')}>Generate tests for a hook</button>
         </>
       )}
       {formType === 'hooks' && <HookForm />}
