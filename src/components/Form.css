@@ -18,5 +18,12 @@ button {
 
 .markdown-content {
     overflow: auto;
-    height: calc(40vh - 50px); /* Adjust as needed */
+    height: calc(40vh - 50px);
 }
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }

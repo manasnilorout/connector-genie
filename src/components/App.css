@@ -7,13 +7,14 @@
 
 button {
   margin: 10px auto;
-  background-color: blue;
-  color: white;
+  background-color: orangered;
+  color: black;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 200px; /* Add this line to make the buttons the same width */
+  width: 200px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -25,16 +26,16 @@ button:hover {
   top: 0;
   left: 0;
   margin: 10px;
-  background-color: darkblue; /* Make the home button darker */
-  color: white;
+  background-color: orangered;
+  color: black;
+  font-weight: bold;
 }
 
-/* Add this block to style the menu bar */
 #menu-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: lightblue;
+  background-color: rgb(157, 163, 163);
   height: 50px;
 }
