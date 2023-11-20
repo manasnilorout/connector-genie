@@ -1,0 +1,22 @@
+.form-container {
+    display: grid;
+    grid-template-rows: 35% auto;
+    height: 100vh;
+}
+
+.input-textarea {
+    width: 80%;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+.markdown-content {
+    overflow: auto;
+    height: calc(40vh - 50px); /* Adjust as needed */
+}

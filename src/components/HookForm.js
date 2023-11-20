@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './HookForm.css';
+import ApiResponse from './ApiResponse';
 
-function HookForm({ setApiResponse }) {
-  const [inputValue, setInputValue] = useState('');
+function HookForm() {
+    const [inputValue, setInputValue] = useState('');
+    const [apiResponse, setApiResponse] = useState('');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response = await axios.post('API_URL', { input: inputValue });
-    setApiResponse(response.data);
-  };
+    const getHookMessage = (message) => {
+        return message + '\n\n'
+            + 'Always call done function in each block\n'
+            + 'Always add detailed comments to the response code\n'
+            + 'Output only the javascript code in the response no additional text\n'
+    }
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-      <button type="submit">Submit</button>
-    </form>
-  );
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const response = await axios.post('http://0.0.0.0:3000/ai/get-answer', { message: getHookMessage(inputValue) });
+        setApiResponse(response.data.answer);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <textarea value={inputValue} onChange={handleInputChange} className="input-textarea" /> {/* Use a textarea instead of an input */}
+            <button type="submit">Generate Hook</button>
+            <ApiResponse response={apiResponse} />
+        </form>
+    );
 }
 
 export default HookForm;
