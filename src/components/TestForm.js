@@ -17,7 +17,7 @@ function TestForm() {
 
   const getHookMessage = (message) => {
     return '```javascript\n' + message + '\n```'
-    + '\n\nGenerate test cases for above script using ava\n'
+    + '\n\nGenerate test cases for above JS hook using ava\n'
     + 'The test cases must start with below typescript code\n'
     + '```typescript\n'
     + 'import * as fs from \'fs\';\n'
