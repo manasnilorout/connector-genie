@@ -1,0 +1,34 @@
+.copy-icon {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Adjust this to make the icon larger or smaller */
+  color: #333; /* Change this to adjust the color of the icon */
+  background-color: #f9f9f9; /* Change this to adjust the background color */
+  border-radius: 50%; /* This makes the background circular */
+  padding: 5px; /* This adds some space around the icon */
+  transition: all 0.3s ease; /* This makes the hover effect animate smoothly */
+}
+
+.copy-icon:hover {
+  color: #fff; /* Change this to adjust the color of the icon on hover */
+  background-color: #333; /* Change this to adjust the background color on hover */
+}
+
+.copy-icon span {
+  display: none; /* This hides the copy success message by default */
+  position: absolute;
+  bottom: 100%; /* This positions the message above the icon */
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap; /* This prevents the message from wrapping to multiple lines */
+}
+
+.copy-icon.clicked span {
+  display: block; /* This shows the copy success message when the icon is clicked */
+}
